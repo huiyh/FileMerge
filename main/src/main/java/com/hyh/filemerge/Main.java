@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
+
     public static void main(String[] args) {
         File dir = new File("/Users/huiyh/Downloads/迅雷下载/亲戚弟弟");
         String nameFormat = "1384f91ac6d00{*}.ts";
@@ -36,7 +37,7 @@ public class Main {
         }
 
         BufferedInputStream in;
-        try (BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(destFile));) {
+        try (BufferedOutputStream out = new BufferedOutputStream(new FileOutputStream(destFile))) {
             System.out.println("源文件列表:");
             byte[] buffer = new byte[1024 * 8];
             for (File sourceFile : sourceFiles) {
